@@ -132,6 +132,43 @@
   font-size: $type-size-6;
 }
 
+.pub {
+  margin: 1rem 0;
+}
+
+.pub dt {
+  margin-bottom: .25rem;
+}
+
+.pub__thumb {
+  float: left;
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.conference-label {
+  display: inline-block;
+  padding: .125rem .5rem;
+  border-radius: 999px;
+  font-size: $type-size-7;
+  background: var(--global-border-color);
+  color: var(--global-text-color);
+}
+
+.pub__venue {
+  margin-top: .25rem;
+  color: var(--global-text-color-light);
+  font-size: $type-size-6;
+}
+
+.pub + .pub {
+  margin-top: 1rem;
+  padding-top: .75rem;
+  border-top: 1px solid var(--global-border-color);
+}
+
 .pub-graph {
   margin: .5rem 0 .25rem 0;
   padding: .5rem;
