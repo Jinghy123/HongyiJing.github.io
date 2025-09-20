@@ -1,0 +1,51 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="list__item">
+  <dl class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+    <dt>
+      {% if post.thumb %}
+        <img src="{{ post.thumb }}" alt="{{ post.conference_label | default: post.venue }}" class="pub__thumb">
+      {% endif %}
+      {% if post.conference_label %}
+        <span class="conference-label">{{ post.conference_label }}</span>
+      {% endif %}
+    </dt>
+    <dd>
+      {% assign href = nil %}
+      {% if post.arxiv %}
+        {% assign href = post.arxiv %}
+      {% elsif post.link %}
+        {% assign href = post.link %}
+      {% elsif post.paperurl %}
+        {% assign href = post.paperurl %}
+      {% else %}
+        {% assign href = base_path | append: post.url %}
+      {% endif %}
+      <a href="{{ href }}"{% if href contains 'http' %} target="_blank" rel="noopener"{% endif %}><strong>{{ title }}</strong></a>
+    </dd>
+    {% if post.authors %}
+      <dd class="pub__authors">
+        {% for a in post.authors %}
+          {% assign name = a %}
+          {% if name == 'Peilin Cai' %}
+            <strong>{{ name }}</strong>{% unless forloop.last %}, {% endunless %}
+          {% else %}
+            {{ name }}{% unless forloop.last %}, {% endunless %}
+          {% endif %}
+        {% endfor %}
+      </dd>
+    {% endif %}
+    <dd class="pub__venue">
+      {% if post.presentation_note %}<strong class="co-first"><i>{{ post.presentation_note }}</i></strong> {% endif %}
+      {% if post.venue %}in {{ post.venue }}{% endif %}{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+    </dd>
+  </dl>
+</div>
+
+
