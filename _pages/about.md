@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Sailing To Linux"
+title: "Peilin Cai's Personal Website"
 excerpt: "Last Updated on Sept. 19th"
 author_profile: true
 redirect_from: 
@@ -65,4 +65,3 @@ CV: Talks and Teaching lists disabled.
 {% endcomment %}
   
 <!-- ### Service and leadership -->
-
