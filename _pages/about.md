@@ -42,15 +42,5 @@ Talks, Teaching, Portfolio, and Blog sections temporarily disabled.
   <a class="btn btn--primary btn--large" href="{{ '/CV/Peilin_Cai_CV_en.pdf' | relative_url }}" target="_blank" rel="noopener">English CV</a>
   <a class="btn btn--primary btn--large" href="{{ '/CV/Peilin_Cai_CV_cn.pdf' | relative_url }}" target="_blank" rel="noopener">中文简历</a>
 </div>
-
-<h3 id="cv">Publications</h3>
-
-<ul>{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
-  
-{% comment %}
-CV: Talks and Teaching lists disabled.
-{% endcomment %}
   
 <!-- ### Service and leadership -->
