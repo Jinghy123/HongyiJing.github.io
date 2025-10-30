@@ -34,7 +34,7 @@ Talks, Teaching, Portfolio, and Blog sections temporarily disabled.
 
 <h2 id="cv">CV</h2>
 <div class="cv-button-group" style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0;">
-  <a class="btn btn--primary btn--large" href="{{ '/CV/Peilin_Cai_CV_en.pdf' | relative_url }}" target="_blank" rel="noopener">English CV</a>
+  <a class="btn btn--primary btn--large" href="{{ '/CV/CV_HongyiJing.pdf' | relative_url }}" target="_blank" rel="noopener">CV</a>
 </div>
   
 <!-- ### Service and leadership -->
