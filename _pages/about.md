@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 <h2 id="about">About</h2>
 
-I am a second-year CS master student at [University of Southern California](https://www.cs.usc.edu/), working with [Prof. Yue Wang](https://yuewang.xyz/) at [Graphics & Vision Lab](https://usc-gvl.github.io/). My research mainly focuses on Robotics, particularly humanoid manipulation and whole-body control. I aim to develop intelligent systems that enable humanoid robots to perform coordinated, dynamic, and physically interactive tasks in the real world.
+I am a second-year CS master student at [University of Southern California](https://www.cs.usc.edu/), working with [Prof. Yue Wang](https://yuewang.xyz/) at [Graphics & Vision Lab](https://usc-gvl.github.io/). My research mainly focuses on Robotics, particularly **humanoid dexterous manipulation** and **whole-body control**. I aim to develop intelligent systems that enable humanoid robots to perform coordinated, dynamic, and physically interactive tasks in the real world.
 
 Before this, I received my Bachelor's degree at [Huazhong University of Science and Technology](https://english.hust.edu.cn/), where I worked with [Prof. Xiang Xiang](https://eglxiang.github.io/). I also served as an research intern in [MINE Lab](https://sites.nd.edu/xiangliang-zhang/) led by [Prof.Xiangliang Zhang](https://engineering.nd.edu/faculty/xiangliang-zhang/) at Notre Dame during my senior year.
 
