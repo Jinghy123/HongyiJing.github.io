@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 date: 2025-10-30
 venue: "arXiv preprint"
-conference_label: "ICRA 2026 (Under Review)"
+conference_label: "ArXiv Preprint"
 paperurl: "https://arxiv.org/abs/2510.08807"
 code: "https://github.com/ausbxuse/Humanoid-Everyday"
 website: "https://humanoideveryday.github.io/"
