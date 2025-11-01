@@ -1,67 +1,75 @@
-/* ===== Publication Buttons (Gray Style + Strong Override Fix) ===== */
+/* ===== Publication Buttons (Light Blue-Grey Elegant Style) ===== */
 
 .pub__links {
   display: flex !important;
   flex-wrap: wrap !important;
   align-items: center !important;
-  gap: 14px !important;
+  gap: 10px !important;
   margin-top: 10px !important;
   margin-bottom: 6px !important;
 }
 
-/* 通用按钮：强制覆盖主题的 .btn / a 样式 */
+/* 通用按钮样式 */
 .pub__links a,
 .pub__links summary {
-  all: unset; /* 彻底清除 inherited button 样式 */
+  all: unset;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  background: #dddddd !important;  /* 稍深灰色 */
-  border: 1px solid #c0c0c0 !important;
-  color: #333 !important;
-  font-size: 1em !important;
-  font-weight: 600 !important;
-  padding: 7px 16px !important;
+
+  /* 🎨 淡蓝灰底 + 圆角风格 */
+  background: #e8f0fe !important;
+  color: #1a73e8 !important;
   border-radius: 8px !important;
-  cursor: pointer !important;
+  font-weight: 600 !important;
+  font-size: 0.95em !important;
+  padding: 6px 16px !important;
   line-height: 1.25 !important;
+  border: 1px solid #d2e3fc !important;
   text-decoration: none !important;
+  cursor: pointer !important;
   white-space: nowrap !important;
-  transition: all 0.2s ease !important;
+  transition: all 0.25s ease !important;
 }
 
-/* hover 效果 */
+/* hover 效果：略深蓝+轻阴影 */
 .pub__links a:hover,
 .pub__links summary:hover {
-  background: #d0d0d0 !important;
-  border-color: #b0b0b0 !important;
-  color: #111 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+  background: #d2e3fc !important;
+  color: #174ea6 !important;
+  border-color: #aecbfa !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(26, 115, 232, 0.15);
 }
 
-/* 修复 Cite 不对齐问题 */
+/* 修复 Cite 换行问题 */
 .pub-cite {
   display: inline-flex !important;
   align-items: center !important;
 }
 
-/* 移除 cite 默认箭头 */
+.pub-cite summary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+
 .pub-cite summary::-webkit-details-marker {
   display: none !important;
 }
 
-/* 展开的 BibTeX 区域 */
+/* BibTeX 展开框 */
 .pub-cite .citation-box {
   margin-top: 10px !important;
-  background: #f5f5f5 !important;
-  padding: 12px 16px !important;
+  background: #f9fafb !important;
+  border: 1px solid #e0e0e0 !important;
   border-radius: 8px !important;
+  padding: 12px 16px !important;
   font-size: 0.9em !important;
   color: #333 !important;
   white-space: pre-wrap !important;
   overflow-x: auto !important;
-  border: 1px solid #e0e0e0 !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
