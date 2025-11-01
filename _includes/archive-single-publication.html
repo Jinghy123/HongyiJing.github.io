@@ -63,25 +63,26 @@
     {% if post.paperurl or post.code or post.website or post.graphpdf or post.citation %}
   <dd class="pub__links">
     {% if post.paperurl %}
-      <a href="{{ post.paperurl }}" target="_blank" rel="noopener" class="pub-btn">Paper</a>
+      <a href="{{ post.paperurl }}" target="_blank" rel="noopener" class="btn btn--info btn--small">Paper</a>
     {% endif %}
     {% if post.code %}
-      <a href="{{ post.code }}" target="_blank" rel="noopener" class="pub-btn">Code</a>
+      <a href="{{ post.code }}" target="_blank" rel="noopener" class="btn btn--success btn--small">Code</a>
     {% endif %}
     {% if post.website %}
-      <a href="{{ post.website }}" target="_blank" rel="noopener" class="pub-btn">Website</a>
+      <a href="{{ post.website }}" target="_blank" rel="noopener" class="btn btn--warning btn--small">Website</a>
     {% endif %}
     {% if post.graphpdf %}
-      <a href="{{ post.graphpdf }}" target="_blank" rel="noopener" class="pub-btn">Figure</a>
+      <a href="{{ post.graphpdf }}" target="_blank" rel="noopener" class="btn btn--danger btn--small">Figure</a>
     {% endif %}
     {% if post.citation %}
       <details class="pub-cite">
-        <summary class="pub-btn">Cite</summary>
+        <summary class="btn btn--light-outline btn--small">Cite</summary>
         <pre>{{ post.citation }}</pre>
       </details>
     {% endif %}
   </dd>
 {% endif %}
+
 
 
   </dl>
