@@ -10,7 +10,7 @@ authors:
   - Yuwen Tan
   - Xiang Xiang
   - Yifeng Chen
-  - **Hongyi Jing**
+  - "**Hongyi Jing**"
   - Shiyang Ye
   - Chaoran Xue
   - Hui Xu
