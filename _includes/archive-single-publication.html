@@ -8,14 +8,16 @@
 
 <div class="list__item">
   <dl class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+
     <dt>
       {% if post.thumb %}
-        <img src="{{ post.thumb }}" alt="{{ post.conference_label | default: post.venue }}" class="pub__thumb">
+        <img src="{{ post.thumb | relative_url }}" alt="{{ post.conference_label | default: post.venue }}" class="pub__thumb" style="border-radius:6px; max-width:260px;">
       {% endif %}
       {% if post.conference_label %}
         <span class="conference-label">{{ post.conference_label }}</span>
       {% endif %}
     </dt>
+
     <dd>
       {% assign href = nil %}
       {% if post.arxiv %}
@@ -27,13 +29,17 @@
       {% else %}
         {% assign href = base_path | append: post.url %}
       {% endif %}
-      <a href="{{ href }}"{% if href contains 'http' %} target="_blank" rel="noopener"{% endif %}><strong>{{ title }}</strong></a>
+
+      <a href="{{ href }}"{% if href contains 'http' %} target="_blank" rel="noopener"{% endif %}>
+        <strong>{{ title }}</strong>
+      </a>
     </dd>
+
     {% if post.authors %}
       <dd class="pub__authors">
         {% for a in post.authors %}
           {% assign name = a %}
-          {% if name == 'Peilin Cai' %}
+          {% if name == 'Hongyi Jing*' %}
             <strong>{{ name }}</strong>{% unless forloop.last %}, {% endunless %}
           {% else %}
             {{ name }}{% unless forloop.last %}, {% endunless %}
@@ -41,11 +47,35 @@
         {% endfor %}
       </dd>
     {% endif %}
+
     <dd class="pub__venue">
-      {% if post.presentation_note %}<strong class="co-first"><i>{{ post.presentation_note }}</i></strong> {% endif %}
-      {% if post.venue %}in {{ post.venue }}{% endif %}{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}
+      {% if post.presentation_note %}
+        <strong class="co-first"><i>{{ post.presentation_note }}</i></strong>
+      {% endif %}
+      {% if post.venue %}
+        in {{ post.venue }}
+      {% endif %}
+      {% if post.date %}
+        , {{ post.date | date: "%Y" }}
+      {% endif %}
     </dd>
+
+    {% if post.paperurl or post.code or post.website or post.graphpdf %}
+      <dd class="pub__links" style="margin-top: 4px;">
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}" target="_blank" rel="noopener" style="margin-right:8px;">📄 Paper</a>
+        {% endif %}
+        {% if post.code %}
+          <a href="{{ post.code }}" target="_blank" rel="noopener" style="margin-right:8px;">💻 Code</a>
+        {% endif %}
+        {% if post.website %}
+          <a href="{{ post.website }}" target="_blank" rel="noopener" style="margin-right:8px;">🌐 Website</a>
+        {% endif %}
+        {% if post.graphpdf %}
+          <a href="{{ post.graphpdf }}" target="_blank" rel="noopener">🖼️ Figure</a>
+        {% endif %}
+      </dd>
+    {% endif %}
+
   </dl>
 </div>
-
-
