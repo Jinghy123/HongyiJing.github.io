@@ -19,7 +19,7 @@ authors:
   - Sergey Zakharov
   - Vitor Guizilini
   - Yue Wang†
-thumbnail: "/files/thumbs/Humanoid_Everyday.gif"
+thumb: "/files/thumbs/Humanoid_Everyday.gif"
 citation: "@article{zhao2025humanoid,
   title={Humanoid Everyday: A Comprehensive Robotic Dataset for Open-World Humanoid Manipulation},
   author={Zhao, Zhenyu and Jing, Hongyi and Liu, Xiawei and Mao, Jiageng and Jha, Abha and Yang, Hanwen and Xue, Rong and Zakharov, Sergey and Guizilini, Vitor and Wang, Yue},
