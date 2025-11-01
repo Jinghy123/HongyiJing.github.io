@@ -39,7 +39,7 @@
       <dd class="pub__authors">
         {% for a in post.authors %}
           {% assign name = a %}
-          {% if name == 'Hongyi Jing*' %}
+          {% if name == 'Hongyi Jing' %}
             <strong>{{ name }}</strong>{% unless forloop.last %}, {% endunless %}
           {% else %}
             {{ name }}{% unless forloop.last %}, {% endunless %}
