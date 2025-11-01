@@ -60,33 +60,29 @@
       {% endif %}
     </dd>
 
-    {% if post.paperurl or post.code or post.website or post.graphpdf %}
-      <dd class="pub__links" style="margin-top: 4px;">
-        {% if post.paperurl %}
-          <a href="{{ post.paperurl }}" target="_blank" rel="noopener" style="margin-right:8px;">📄 Paper</a>
-        {% endif %}
-        {% if post.code %}
-          <a href="{{ post.code }}" target="_blank" rel="noopener" style="margin-right:8px;">💻 Code</a>
-        {% endif %}
-        {% if post.website %}
-          <a href="{{ post.website }}" target="_blank" rel="noopener" style="margin-right:8px;">🌐 Website</a>
-        {% endif %}
-        {% if post.graphpdf %}
-          <a href="{{ post.graphpdf }}" target="_blank" rel="noopener">🖼️ Figure</a>
-        {% endif %}
-      </dd>
+    {% if post.paperurl or post.code or post.website or post.graphpdf or post.citation %}
+  <dd class="pub__links">
+    {% if post.paperurl %}
+      <a href="{{ post.paperurl }}" target="_blank" rel="noopener" class="pub-btn">Paper</a>
     {% endif %}
-
+    {% if post.code %}
+      <a href="{{ post.code }}" target="_blank" rel="noopener" class="pub-btn">Code</a>
+    {% endif %}
+    {% if post.website %}
+      <a href="{{ post.website }}" target="_blank" rel="noopener" class="pub-btn">Website</a>
+    {% endif %}
+    {% if post.graphpdf %}
+      <a href="{{ post.graphpdf }}" target="_blank" rel="noopener" class="pub-btn">Figure</a>
+    {% endif %}
     {% if post.citation %}
-      <dd class="pub__citation" style="margin-top: 6px;">
-        <details>
-          <summary>📚 Citation (BibTeX)</summary>
-          <pre style="white-space: pre-wrap; font-size:0.85em; background:#f9f9f9; padding:6px; border-radius:6px; overflow-x:auto;">
-{{ post.citation }}
-          </pre>
-        </details>
-      </dd>
+      <details class="pub-cite">
+        <summary class="pub-btn">Cite</summary>
+        <pre>{{ post.citation }}</pre>
+      </details>
     {% endif %}
+  </dd>
+{% endif %}
+
 
   </dl>
 </div>
