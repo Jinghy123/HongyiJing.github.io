@@ -36,17 +36,18 @@
     </dd>
 
     {% if post.authors %}
-      <dd class="pub__authors">
-        {% for a in post.authors %}
-          {% assign name = a %}
-          {% if name == 'Hongyi Jing' %}
-            <strong>{{ name }}</strong>{% unless forloop.last %}, {% endunless %}
-          {% else %}
-            {{ name }}{% unless forloop.last %}, {% endunless %}
-          {% endif %}
-        {% endfor %}
-      </dd>
-    {% endif %}
+    <dd class="pub__authors">
+      {% for a in post.authors %}
+        {% assign name = a | strip %}
+        {% if name contains 'Hongyi Jing' %}
+          <strong>{{ name }}</strong>{% unless forloop.last %}, {% endunless %}
+        {% else %}
+          {{ name }}{% unless forloop.last %}, {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </dd>
+  {% endif %}
+
 
     <dd class="pub__venue">
       {% if post.presentation_note %}
