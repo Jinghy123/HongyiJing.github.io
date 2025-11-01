@@ -14,7 +14,7 @@ authors:
   - Shiyang Ye
   - Chaoran Xue
   - Hui Xu
-thumbnail: "/files/thumbs/Teeth.jpg"
+thumb: "/files/thumbs/Teeth.jpg"
 citation: "@inproceedings{tan2023coupling,
   title={Coupling Bracket Segmentation and Tooth Surface Reconstruction on 3D Dental Models},
   author={Tan, Yuwen and Xiang, Xiang and Chen, Yifeng and Jing, Hongyi and Ye, Shiyang and Xue, Chaoran and Xu, Hui},
