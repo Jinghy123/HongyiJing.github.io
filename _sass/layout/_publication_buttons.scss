@@ -1,54 +1,53 @@
-/* ===== Publication Buttons (Unified Gray Style) ===== */
+/* ===== Publication Buttons (fixed gray style) ===== */
 
 .pub__links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 12px;               /* 按钮之间间隔 */
   margin-top: 10px;
   margin-bottom: 6px;
 }
 
-/* 灰色按钮 */
-.pub-btn-gray {
+.pub__links a,
+.pub__links summary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1em;
-  font-weight: 600;
-  padding: 7px 18px;
-  border-radius: 8px;
-  color: #333 !important;
-  background-color: #f2f2f2;
+  background: #f2f2f2;     /* 浅灰底 */
   border: 1px solid #e0e0e0;
-  text-decoration: none;
+  color: #333 !important;  /* 深灰字 */
+  font-size: 0.95em;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  line-height: 1.2;
+  cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.pub-btn-gray:hover {
-  background-color: #e8f0fe;
+/* 悬停效果 */
+.pub__links a:hover,
+.pub__links summary:hover {
+  background: #e8f0fe;
   border-color: #cdd9f1;
   color: #174ea6 !important;
   transform: translateY(-1px);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
-/* Cite 折叠部分 */
-.pub-cite summary {
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-}
-
+/* 去掉 Cite 的默认小箭头 */
 .pub-cite summary::-webkit-details-marker {
   display: none;
 }
 
+/* Citation 展开部分 */
 .pub-cite .citation-box {
   margin-top: 8px;
   background: #f9fafb;
   padding: 10px 12px;
   border-radius: 8px;
-  font-size: 0.95em;
+  font-size: 0.9em;
   color: #333;
   white-space: pre-wrap;
   overflow-x: auto;
